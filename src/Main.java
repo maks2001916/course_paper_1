@@ -18,6 +18,7 @@ public class Main {
         sumSalary(storage);
         minSalary(storage);
         maxSalary(storage);
+        averageSalary(storage);
     }
 
 
@@ -53,6 +54,14 @@ public class Main {
             }
         }
         System.out.println("Максимальная зарплата - " + x);
+    }
+
+    public static void averageSalary(Employee[] averageSalary) {
+        int x = 0;
+        for (int i = 0; i < averageSalary.length; i++) {
+            x += averageSalary[i].getSalary();
+        }
+        System.out.println("Средняя зарплата - " + x / averageSalary.length);
     }
 
 }
