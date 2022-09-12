@@ -3,10 +3,10 @@ import java.util.Objects;
 public class Employee {
     private Personality fio;
     private String department;
-    private String salary;
+    private int salary;
     private static int count = 0;
     private int id;
-    public Employee(Personality fio, String department, String salary) {
+    public Employee(Personality fio, String department, int salary) {
         count++;
         this.fio = fio;
         this.department = department;
@@ -26,7 +26,7 @@ public class Employee {
         return this.department;
     }
 
-    public String getSalary() {
+    public int getSalary() {
         return this.salary;
     }
 
@@ -34,7 +34,7 @@ public class Employee {
         this.department = department;
     }
 
-    public void setSalary(String salary) {
+    public void setSalary(int salary) {
         this.salary = salary;
     }
 

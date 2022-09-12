@@ -3,11 +3,11 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        Employee ivan = new Employee(new Personality("Ivan", "Ivanov", "Ivanovich"), "1", "57825");
-        Employee sergei = new Employee(new Personality("Sergei", "Sergeev", "Sergeevich"), "2", " 74625");
-        Employee dmitrii = new Employee(new Personality("Dmitrii", "Dmitriev", "Dmitrievich"), "3", "63817");
-        Employee nikolai = new Employee(new Personality("Nikolai", "Nikolaev", "nikolaevich"), "4", "72381");
-        Employee petr = new Employee(new Personality("Petr", "Petrov", "Petrovich"), "5", "62837");
+        Employee ivan = new Employee(new Personality("Ivan", "Ivanov", "Ivanovich"), "1", 57825);
+        Employee sergei = new Employee(new Personality("Sergei", "Sergeev", "Sergeevich"), "2", 74625);
+        Employee dmitrii = new Employee(new Personality("Dmitrii", "Dmitriev", "Dmitrievich"), "3", 63817);
+        Employee nikolai = new Employee(new Personality("Nikolai", "Nikolaev", "nikolaevich"), "4", 72381);
+        Employee petr = new Employee(new Personality("Petr", "Petrov", "Petrovich"), "5", 62837);
         Employee[] storage = new Employee[5];
         storage[0] = ivan;
         storage[1] = sergei;
@@ -15,7 +15,8 @@ public class Main {
         storage[3] = nikolai;
         storage[4] = petr;
         list(storage);
-
+        sumSalary(storage);
+        minSalary(storage);
     }
 
 
@@ -24,4 +25,23 @@ public class Main {
             System.out.println(storage[i]);
         }
     }
+
+    public static void sumSalary(Employee[] storage) {
+        int x = 0;
+        for (int i = 0; i < storage.length; i++) {
+            x += storage[i].getSalary();
+        }
+        System.out.println("Сумма затрат на зарплату - " + x);
+    }
+
+    public static void minSalary(Employee[] minSalary) {
+        int x = minSalary[0].getSalary();
+        for (int i = 0; i < minSalary.length; i++) {
+            if (minSalary[i].getSalary() < x) {
+                x = minSalary[i].getSalary();
+            }
+        }
+        System.out.println("Минимальная зарплата - " + x);
+    }
+
 }
