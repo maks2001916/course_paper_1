@@ -17,6 +17,7 @@ public class Main {
         list(storage);
         sumSalary(storage);
         minSalary(storage);
+        maxSalary(storage);
     }
 
 
@@ -42,6 +43,16 @@ public class Main {
             }
         }
         System.out.println("Минимальная зарплата - " + x);
+    }
+
+    public static void maxSalary(Employee[] maxsalary) {
+        int x = maxsalary[0].getSalary();
+        for (int i = 0; i < maxsalary.length; i++) {
+            if (maxsalary[i].getSalary() > x) {
+                x = maxsalary[i].getSalary();
+            }
+        }
+        System.out.println("Максимальная зарплата - " + x);
     }
 
 }
