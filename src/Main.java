@@ -1,7 +1,6 @@
 import java.util.Arrays;
 
 public class Main {
-
     public static void main(String[] args) {
         Employee ivan = new Employee(new Personality("Ivan", "Ivanov", "Ivanovich"), "1", 57825);
         Employee sergei = new Employee(new Personality("Sergei", "Sergeev", "Sergeevich"), "2", 74625);
@@ -21,14 +20,11 @@ public class Main {
         averageSalary(storage);
         fio(storage);
     }
-
-
     public static void list(Employee[] storage) {
         for (int i = 0; i < storage.length; i++) {
             System.out.println(storage[i]);
         }
     }
-
     public static void sumSalary(Employee[] storage) {
         int x = 0;
         for (int i = 0; i < storage.length; i++) {
@@ -36,7 +32,6 @@ public class Main {
         }
         System.out.println("Сумма затрат на зарплату - " + x);
     }
-
     public static void minSalary(Employee[] minSalary) {
         int x = minSalary[0].getSalary();
         for (int i = 0; i < minSalary.length; i++) {
@@ -46,7 +41,6 @@ public class Main {
         }
         System.out.println("Минимальная зарплата - " + x);
     }
-
     public static void maxSalary(Employee[] maxsalary) {
         int x = maxsalary[0].getSalary();
         for (int i = 0; i < maxsalary.length; i++) {
@@ -56,7 +50,6 @@ public class Main {
         }
         System.out.println("Максимальная зарплата - " + x);
     }
-
     public static void averageSalary(Employee[] averageSalary) {
         int x = 0;
         for (int i = 0; i < averageSalary.length; i++) {
@@ -64,11 +57,9 @@ public class Main {
         }
         System.out.println("Средняя зарплата - " + x / averageSalary.length);
     }
-
     public static void fio(Employee[] fio) {
         for (int i = 0; i < fio.length; i++) {
             System.out.println(fio[i].getFio());
         }
     }
-
 }
