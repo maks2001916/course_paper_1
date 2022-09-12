@@ -19,6 +19,7 @@ public class Main {
         minSalary(storage);
         maxSalary(storage);
         averageSalary(storage);
+        fio(storage);
     }
 
 
@@ -62,6 +63,12 @@ public class Main {
             x += averageSalary[i].getSalary();
         }
         System.out.println("Средняя зарплата - " + x / averageSalary.length);
+    }
+
+    public static void fio(Employee[] fio) {
+        for (int i = 0; i < fio.length; i++) {
+            System.out.println(fio[i].getFio());
+        }
     }
 
 }
