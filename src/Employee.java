@@ -6,6 +6,7 @@ public class Employee {
     private int salary;
     private static int count = 0;
     private int id;
+
     public Employee(Personality fio, String department, int salary) {
         count++;
         this.fio = fio;
